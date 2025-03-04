@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 
+body {
+  background-color: rgb(242, 234, 234) !important;
+}
 
 /* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
