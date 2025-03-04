@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 const sequelize = require('./config/db');
 
-
+const taskRoutes = require('./routes/taskRoutes');
 
 const app = express();
 
@@ -13,7 +13,8 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-
+// Routes
+app.use('/api', taskRoutes);
 
 // Sync Database
 sequelize.sync()
